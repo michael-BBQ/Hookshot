@@ -196,6 +196,14 @@ Restart the game. The same setting applies when Steam or RecompLauncher starts t
 This is a workaround for some artifacts, not a general lighting fix. It can substantially increase graphics-memory
 use and cause stalls when the card runs out of headroom. To undo it, remove that line and restart the game.
 
+#### Trees floating in the air
+
+Trees can hang in the air where a hill or mountain should be (Kakariko, Hyrule Castle, Hyrule Field; [#994](https://github.com/NotRexed/Hookshot/issues/994)). As a workaround, leave out the one pair of programs that draws those far trees. Close the game. In the game folder, beside `image.bin`, create `skip_programs.txt` containing `3cb7682790143836,4f0c0b40ab3a32cd`. Then add this line to `hookshot_env.txt`, with the full path to your game folder:
+
+`RX_VK_SKIP_FILE=C:\path\to\game\skip_programs.txt`
+
+Restart the game. This also leaves out some far trees that were fine. To undo it, remove that line and restart the game.
+
 ## In-game menu
 
 Press <kbd>Insert</kbd> (or <kbd>F1</kbd>) in game, or on a controller the Home button (or Select and Start together).
